@@ -4,18 +4,7 @@ import "../styles/components/PhotosList.scss";
 
 const PhotosList = ({ photos }) => {
   const listElements = photos.map((eachPhoto, index) => (
-    <li className="photoElement" alt="display-photo">
-    <div className="photoElement__photoContainer">
-      <div className="photoElement__photoContainer--indexContainer">
-      </div>
-      <img
-        className="photoElement__photoContainer--photo"
-        src={eachPhoto.photo}
-        alt={eachPhoto}
-      />
-    </div>
-  </li>
-    // <Photo  />
+    <Photo key={eachPhoto.id} index={index} eachPhoto={eachPhoto} />
   ));
   return (
     <section className="photosSection">
