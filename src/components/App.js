@@ -1,31 +1,31 @@
 import { useEffect, useState } from "react";
-// services
 import getApiData from "../services/api";
-// components
 import Header from "./Header";
 import PhotosList from "./PhotosList";
-// styles
+import Loader from "./Loader";
 import "../styles/App.scss";
 
 const App = () => {
-  //     STATES       //
   const [photos, setPhotos] = useState([]);
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
-  //    USE EFFECTS     //
   // Take api data
   useEffect(() => {
     getApiData()
-      .then((data) => {
+      .then((data) =>{ 
+        setIsLoading(false);
         setPhotos(data);
       })
+      .catch((error) => setError(error.message));
   }, []);
-
-  //    FUNCTIONS      //
 
   return (
     <div className="App">
       <Header />
       <main className="main">
+      <Loader isLoading={isLoading} />
+        {error && <p>{error} </p>}
         <PhotosList photos={photos} />
       </main>
     </div>
