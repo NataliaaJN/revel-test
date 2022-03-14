@@ -4,6 +4,11 @@ import PhotosList from "./PhotosList";
 import "../styles/App.scss";
 
 const App = () => {
+  const [photos, setPhotos] = useState([]);
+
+  // Take api data
+  
+
   return (
     <div className="App">
       <Header />
