@@ -2,8 +2,8 @@ import "../styles/components/Header.scss";
 
 const Header = () => {
   return (
-    <header>
-      <h1>Cool pics</h1>
+    <header className="header">
+      <h1 className="header__title">Cool pics</h1>
     </header>
   );
 };
