@@ -26,7 +26,7 @@ const App = () => {
     <div className="App">
       <Header />
       <main className="main">
-        <PhotosList />
+        <PhotosList photos={photos} />
       </main>
     </div>
   );
