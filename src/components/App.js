@@ -12,10 +12,11 @@ const App = () => {
 
   // Take api data
   useEffect(() => {
+    setIsLoading(true);
     getApiData()
-      .then((data) =>{ 
-        setIsLoading(false);
+      .then((data) => {
         setPhotos(data);
+        setIsLoading(false);
       })
       .catch((error) => setError(error.message));
   }, []);
@@ -24,7 +25,7 @@ const App = () => {
     <div className="App">
       <Header />
       <main className="main">
-      <Loader isLoading={isLoading} />
+        <Loader isLoading={isLoading} />
         {error && <p>{error} </p>}
         <PhotosList photos={photos} />
       </main>
