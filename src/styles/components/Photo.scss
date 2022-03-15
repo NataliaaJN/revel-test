@@ -1,9 +1,17 @@
 @import "../core/variables";
+@import "../core/mixins";
+@import "../core/animations";
 
 .photoElement {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center-items;
+  -webkit-animation: slide-in 3s 1.25s both;
+    animation: slide-in 3s 1.25s both;
+
+  @include desktop {
+    -webkit-animation: fade-in 3s 1.25s both;
+    animation: fade-in 3s 1.25s both;
+  }
 
   &__photoContainer {
     position: relative;
@@ -11,25 +19,29 @@
     height: 281.98px;
     border: 1px solid #eeeeee;
 
-    @media (min-width: 1024px) {
-        width: 384px; 
-        height: 336px;
+    @include desktop {
+      width: 384px;
+      height: 336px;
+      transition: all 0.5s ease;
+      &:hover {
+        transform: translate(-5px);
       }
+    }
 
     &--indexContainer {
       position: absolute;
+      z-index: 3;
       top: 15.72px;
       right: 15.13px;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      @include center-items;
       width: 69.04px;
       height: 44.21px;
       background: rgba(17, 17, 17, 0.8);
       border-radius: 100px;
       color: $fontColor;
 
-      &--indexNumber{
+      &--indexNumber {
         font: normal 400 24px/28.13px $mainFont;
       }
     }
@@ -38,6 +50,10 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+      transition: all 0.5s ease;
+      &:hover {
+        filter: drop-shadow(8px 8px 10px black);
+      }
     }
   }
 }

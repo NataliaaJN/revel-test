@@ -18,7 +18,7 @@ const Photo = ({ eachPhoto, index }) => {
     }
   };
   return (
-    <li className="photoElement" alt="display-photo">
+    <li className="photoElement">
       <div className="photoElement__photoContainer">
         <div className="photoElement__photoContainer--indexContainer">
           {getIndexNumber()}
