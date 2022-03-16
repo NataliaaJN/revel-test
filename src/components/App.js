@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import getApiData from "../services/api";
 import Header from "./Header";
 import PhotosList from "./PhotosList";
 import Loader from "./Loader";
+import PageNotFound from "./PageNotFound";
 import "../styles/App.scss";
+import ErrorMessage from "./ErrorMessage";
 
 const App = () => {
   const [photos, setPhotos] = useState([]);
@@ -22,14 +25,27 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <Header />
-      <main className="main">
-        <Loader isLoading={isLoading} />
-        {error && <p>{error} </p>}
-        <PhotosList photos={photos} />
-      </main>
-    </div>
+    
+      <div className="App">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <main className="main">
+                  {error && <ErrorMessage error={error} />}
+                  <Loader isLoading={isLoading} />
+                  <PhotosList photos={photos} />
+                </main>
+              </>
+            }
+          />
+
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </div>
+   
   );
 };
 

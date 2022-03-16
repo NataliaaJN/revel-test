@@ -35,6 +35,7 @@ const Photo = ({ eachPhoto, index }) => {
 
 Photo.propTypes ={
   eachPhoto: PropTypes.object.isRequired,
+  index: PropTypes.number.isRequired,
 }
 
 export default Photo;
