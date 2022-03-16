@@ -1,24 +1,16 @@
-import { useEffect, useState } from "react";
+import useScroll from "../hooks/useScroll";
 import "../styles/components/Header.scss";
 
 const Header = () => {
-  const [scrolledHeader, setScrolledHeader] = useState(false);
+  const scrollInfo = useScroll();
 
-  const changeHeaderSize = () => {
-    if (window.scrollY >= 10) {
-      setScrolledHeader(true);
-    } else {
-      setScrolledHeader(false);
-    }
+  const isHeaderScrolled = () => {
+    return scrollInfo.y >= 10;
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", changeHeaderSize);
-  }, []);
-
   return (
-    <header className={ scrolledHeader ? "main-header--scrolled " : "header"}>
-      <h1 className={scrolledHeader ? "main-header--scrolled__title " : "header__title"}>Cool pics</h1>
+    <header className={ isHeaderScrolled() ? "main-header--scrolled " : "header"}>
+      <h1 className={isHeaderScrolled() ? "main-header--scrolled__title " : "header__title"}>Cool pics</h1>
     </header>
   );
 };

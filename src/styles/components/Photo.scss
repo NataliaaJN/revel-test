@@ -5,7 +5,6 @@
 .photoElement {
   display: flex;
   @include center-items;
-  cursor: pointer;
   -webkit-animation: slide-in 3s 1.25s both;
   animation: slide-in 3s 1.25s both;
 
