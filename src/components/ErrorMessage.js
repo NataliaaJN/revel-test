@@ -6,7 +6,7 @@ const ErrorMessage = ({ error }) => {
     <div className="errorMessageContainer">
       <i className="fa-solid fa-triangle-exclamation errorMessageContainer__exclamation"></i>
       <p className="errorMessageContainer__message">
-        {error}{" "}
+        {error}
         <i className="fa-solid fa-face-frown errorMessageContainer__message--icon"></i>
       </p>
     </div>

@@ -3,19 +3,14 @@ import "../styles/components/Photo.scss";
 
 const Photo = ({ eachPhoto, index }) => {
   const getIndexNumber = () => {
-    if (index < 9) {
-      return (
-        <p className="photoElement__photoContainer--indexContainer--indexNumber">
-          #0{index + 1}
-        </p>
-      );
-    } else {
-      return (
-        <p className="photoElement__photoContainer--indexContainer--indexNumber">
-          #{index + 1}
-        </p>
-      );
-    }
+    const photoIndex = index + 1;
+    const indexFormatted = index < 9 ? `#0${photoIndex}` : `#${photoIndex}`;
+
+    return (
+      <p className="photoElement__photoContainer--indexContainer--indexNumber">
+        {indexFormatted}
+      </p>
+    );
   };
   return (
     <li className="photoElement">

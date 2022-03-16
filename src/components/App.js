@@ -4,9 +4,9 @@ import getApiData from "../services/api";
 import Header from "./Header";
 import PhotosList from "./PhotosList";
 import Loader from "./Loader";
+import ErrorMessage from "./ErrorMessage";
 import PageNotFound from "./PageNotFound";
 import "../styles/App.scss";
-import ErrorMessage from "./ErrorMessage";
 
 const App = () => {
 //    STATES     //
