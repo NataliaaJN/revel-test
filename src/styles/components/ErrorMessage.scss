@@ -3,22 +3,21 @@
 
 .errorMessageContainer {
   position: fixed;
-  width: 80%;
-  height: 20vh;
   top: 20%;
   left: 10%;
   display: flex;
   @include center-items;
-  background-color: rgb(224, 86, 86);
-  outline: double 14px yellow;
-  border: 5px solid white;
-  outline: 11px solid rgb(224, 86, 86);
-  color: white;
+  width: 80%;
+  height: 20vh;
+  background-color: $errorMessagebkColor;
+  color: $fontColor;
+  border: 5px solid $errorMessageBorderColor;
+  outline: 11px solid $errorMessagebkColor;
   @include desktop {
-    width: 40vw;
-    height: 20vh;
     top: 20%;
     left: 30vw;
+    width: 40vw;
+    height: 20vh;
   }
 
   &__exclamation {

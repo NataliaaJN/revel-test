@@ -9,10 +9,12 @@ import "../styles/App.scss";
 import ErrorMessage from "./ErrorMessage";
 
 const App = () => {
+//    STATES     //
   const [photos, setPhotos] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
+//    EFFECTS     //
   // Take api data
   useEffect(() => {
     setIsLoading(true);
@@ -25,7 +27,6 @@ const App = () => {
   }, []);
 
   return (
-    
       <div className="App">
         <Routes>
           <Route

@@ -6,15 +6,15 @@
   flex-direction: column;
   @include center-items;
   height: 100vh;
-  background-color: rgb(57, 57, 87);
-  color: $fontColor;
   font-family: $mainFont;
+  background-color: $notFoundBackgroundColor;
+  color: $fontColor;
   padding: 35px;
 
   &__404 {
-    margin-bottom: 30px;
     letter-spacing: 4px;
-    color: aqua;
+    color: $error404Color;
+    margin-bottom: 30px;
     @include desktop {
       font-size: 60px;
       margin-bottom: 50px;
@@ -52,23 +52,24 @@
     height: 35px;
     width: 120px;
     border-radius: 20px;
-    border: 1px solid rgb(171, 208, 233);
-    //background-color: lightgrey;
-    color: rgb(171, 208, 233);
+    border: 1px solid $notFoundMainColor;
+    color: $notFoundMainColor;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: bold;
     transition: all 0.5s ease;
+
     &:hover {
-      background-color: rgb(171, 208, 233);
-      color: black;
+      background-color: $notFoundMainColor;
+      color: $black;
     }
+
     @include desktop {
       width: 200px;
       height: 40px;
-      margin: 20px 0;
       font-size: 20px;
       letter-spacing: 3px;
+      margin: 20px 0;
     }
   }
 }

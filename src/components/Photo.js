@@ -9,7 +9,7 @@ const Photo = ({ eachPhoto, index }) => {
           #0{index + 1}
         </p>
       );
-    } else{
+    } else {
       return (
         <p className="photoElement__photoContainer--indexContainer--indexNumber">
           #{index + 1}
@@ -33,9 +33,9 @@ const Photo = ({ eachPhoto, index }) => {
   );
 };
 
-Photo.propTypes ={
+Photo.propTypes = {
   eachPhoto: PropTypes.object.isRequired,
   index: PropTypes.number.isRequired,
-}
+};
 
 export default Photo;

@@ -7,7 +7,7 @@
   @include center-items;
   cursor: pointer;
   -webkit-animation: slide-in 3s 1.25s both;
-    animation: slide-in 3s 1.25s both;
+  animation: slide-in 3s 1.25s both;
 
   @include desktop {
     -webkit-animation: fade-in 3s 1.25s both;
@@ -18,7 +18,7 @@
     position: relative;
     width: 366px;
     height: 281.98px;
-    border: 1px solid #eeeeee;
+    outline: 1px solid $lightGray2;
 
     @include desktop {
       width: 384px;
@@ -38,7 +38,7 @@
       @include center-items;
       width: 69.04px;
       height: 44.21px;
-      background: rgba(17, 17, 17, 0.8);
+      background: $indexBackground;
       border-radius: 100px;
       color: $fontColor;
 
@@ -53,7 +53,7 @@
       object-position: center;
       transition: all 0.5s ease;
       &:hover {
-        filter: drop-shadow(8px 8px 10px black);
+        filter: drop-shadow(8px 8px 10px $black);
       }
     }
   }

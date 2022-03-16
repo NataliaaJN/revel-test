@@ -2,25 +2,25 @@
 @import "../core/variables";
 
 .main {
-  background-color: $backgroundColor;
   display: grid;
   @include center-items;
+  background-color: $backgroundColor;
   padding: 22px 0 86px 0;
-  
 
   @include desktop {
     padding: 70px 0 74px 0;
   }
 }
 .photosSection {
+  ///
+  margin-top: 86px;
+  ///
   display: grid;
   @include center-items;
- 
 
   @include desktop {
     width: 1211px;
     height: 1077px;
-    
   }
 
   &__photosListContainer {
@@ -28,13 +28,10 @@
     @include center-items;
     grid-template-columns: 1fr;
     gap: 55.02px 0px;
-    // margin: 0 24px;
 
     @include desktop {
       grid-template-columns: repeat(3, 1fr);
       gap: 31px 16px;
-      
-     
     }
   }
 }

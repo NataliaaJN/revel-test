@@ -1,3 +1,71 @@
+//    HEADER RESIZE ANIMATIONS    //
+// Animation for header container
+@keyframes resizeHeader {
+  0% {
+    height: 104px;
+    font-size: 48px;
+  }
+
+  100% {
+    height: 72px;
+    font-size: 32px;
+  }
+}
+
+@keyframes toOriginalHeaderSize {
+  0% {
+    height: 72px;
+  }
+
+  100% {
+    height: 104px;
+  }
+}
+
+// Animation for header font
+@keyframes resizeTitle {
+  0% {
+    font-size: 48px;
+  }
+
+  100% {
+    font-size: 32px;
+  }
+}
+
+// Animation for header container in mobile
+@keyframes resizeHeaderMobile {
+  0% {
+    height: 64px;
+  }
+
+  100% {
+    height: 48px;
+  }
+}
+
+@keyframes toOriginalHeaderSizeMobil {
+  0% {
+    height: 48px;
+  }
+
+  100% {
+    height: 64px;
+  }
+}
+
+// Animation for header font in mobile
+@keyframes resizeTitleMobile {
+  0% {
+    font-size: 32px;
+  }
+
+  100% {
+    font-size: 24px;
+  }
+}
+
+
 // Title animation
 @-webkit-keyframes focus-in-expand {
   0% {
