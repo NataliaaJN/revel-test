@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
+// Api
 import getApiData from "../services/api";
+// Components
 import Header from "./header/Header";
-import PhotosList from "./main/PhotosList";
-import Loader from "./loader/Loader";
-import ErrorMessage from "./handleErrors/ErrorMessage";
+import Main from "./main/Main";
 import PageNotFound from "./handleErrors/PageNotFound";
+// Styles
 import "../styles/App.scss";
 
 const App = () => {
-//    STATES     //
+  //    STATES     //
   const [photos, setPhotos] = useState([]);
   const [errorMessage, setErrorMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-//    EFFECTS     //
+  //    EFFECTS     //
   // Take api data
   useEffect(() => {
     setIsLoading(true);
@@ -27,26 +28,25 @@ const App = () => {
   }, []);
 
   return (
-      <div className="App">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Header />
-                <main className="main">
-                  {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
-                  <Loader isLoading={isLoading} />
-                  <PhotosList photos={photos} />
-                </main>
-              </>
-            }
-          />
+    <div className="App">
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <Main
+                errorMessage={errorMessage}
+                isLoading={isLoading}
+                photos={photos}
+              />
+            </>
+          }
+        />
 
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-      </div>
-   
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </div>
   );
 };
 

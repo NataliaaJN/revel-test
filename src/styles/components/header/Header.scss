@@ -13,6 +13,7 @@
   color: $fontColor;
   -webkit-animation: resizeHeaderMobile 0.6s ease;
   animation: resizeHeaderMobile 0.6s ease;
+
   @include desktop {
     justify-content: flex-start;
     height: 72px;
@@ -39,9 +40,9 @@
 }
 .header {
   ///
-  // width: 100%;
+  width: 100%;
   z-index: 3;
-  position: sticky;
+  position: fixed;
   top: 0;
   ///
   display: flex;
