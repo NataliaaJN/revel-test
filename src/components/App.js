@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import getApiData from "../services/api";
-import Header from "./Header";
-import PhotosList from "./PhotosList";
-import Loader from "./Loader";
-import ErrorMessage from "./ErrorMessage";
-import PageNotFound from "./PageNotFound";
+import Header from "./header/Header";
+import PhotosList from "./main/PhotosList";
+import Loader from "./loader/Loader";
+import ErrorMessage from "./handleErrors/ErrorMessage";
+import PageNotFound from "./handleErrors/PageNotFound";
 import "../styles/App.scss";
 
 const App = () => {
 //    STATES     //
   const [photos, setPhotos] = useState([]);
-  const [error, setError] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
 //    EFFECTS     //
@@ -23,7 +23,7 @@ const App = () => {
         setPhotos(data);
         setIsLoading(false);
       })
-      .catch((error) => setError(error.message));
+      .catch((error) => setErrorMessage(error.message));
   }, []);
 
   return (
@@ -35,7 +35,7 @@ const App = () => {
               <>
                 <Header />
                 <main className="main">
-                  {error && <ErrorMessage error={error} />}
+                  {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
                   <Loader isLoading={isLoading} />
                   <PhotosList photos={photos} />
                 </main>

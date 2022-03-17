@@ -1,6 +1,6 @@
-@import "../core/variables";
-@import "../core/mixins";
-@import "../core/animations";
+@import "../../core/variables";
+@import "../../core/mixins";
+@import "../../core/animations";
 
 .photoElement {
   display: flex;
@@ -15,9 +15,22 @@
 
   &__photoContainer {
     position: relative;
-    width: 366px;
-    height: 281.98px;
+    width: 360px;
+    height: 275px;
     outline: 1px solid $lightGray2;
+    @include smallDevices {
+      width: 250px;
+      height: 225px;
+      
+    }
+    @include mobile {
+      width: 366px;
+      height: 281.98px;
+      transition: all 0.5s ease;
+      &:hover {
+        transform: translate(-5px);
+      }
+    }
 
     @include desktop {
       width: 384px;
@@ -37,9 +50,9 @@
       @include center-items;
       width: 69.04px;
       height: 44.21px;
-      background: $indexBackground;
-      border-radius: 100px;
       color: $fontColor;
+      background-color: $indexBackground;
+      border-radius: 100px;
 
       &--indexNumber {
         font: normal 400 24px/28.13px $mainFont;

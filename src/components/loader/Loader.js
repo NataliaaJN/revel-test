@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "../styles/components/Loader.scss";
+import "../../styles/components/loader/Loader.scss";
 
 const Loader = ({ isLoading }) => {
   return (

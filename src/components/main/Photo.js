@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "../styles/components/Photo.scss";
+import "../../styles/components/main/Photo.scss";
 
 const Photo = ({ eachPhoto, index }) => {
   const getIndexNumber = () => {

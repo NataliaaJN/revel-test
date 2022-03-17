@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import Photo from "./Photo";
-import "../styles/components/PhotosList.scss";
+import "../../styles/components/main/PhotosList.scss";
 
 const PhotosList = ({ photos }) => {
   const listElements = photos.map((eachPhoto, index) => (

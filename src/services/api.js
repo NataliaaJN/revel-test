@@ -1,18 +1,16 @@
-const getApiData = () => {
+const getApiData = async () => {
   const URL = "https://picsum.photos/v2/list?page=1&limit=9";
 
   // Call to api
-  return fetch(URL)
-    .then((response) => response.json())
-    .then((apiData) => {
-      const cleanedApiData = apiData.map((eachApiData) => {
-        return {
-          id: eachApiData.id,
-          photo: eachApiData.download_url,
-        };
-      });
-      return cleanedApiData;
-    });
+  const response = await fetch(URL);
+  const apiData = await response.json();
+  const cleanedApiData = apiData.map((eachApiData) => {
+    return {
+      id: eachApiData.id,
+      photo: eachApiData.download_url,
+    };
+  });
+  return cleanedApiData;
 };
 
 export default getApiData;
