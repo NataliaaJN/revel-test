@@ -27,6 +27,7 @@ const App = () => {
       .then((data) => {
         setPhotos(data);
         setIsLoading(false);
+        console.log(process.env);
       })
       .catch((error) => {
         setErrorMessage(error.message);
