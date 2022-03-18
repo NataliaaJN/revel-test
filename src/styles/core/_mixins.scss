@@ -26,6 +26,13 @@
   }
 }
 
+// Desktop max measures
+@mixin desktopMax {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
 // Display items in center
 @mixin center-items {
   justify-content: center;
