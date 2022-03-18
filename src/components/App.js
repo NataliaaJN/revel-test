@@ -40,7 +40,7 @@ const App = () => {
         <Route
           path="/"
           element={
-            <ErrorBoundary>
+            <>
               <Header />
               {hasError ? (
                 <ErrorMessage errorMessage={errorMessage} />
@@ -51,7 +51,7 @@ const App = () => {
                   photos={photos}
                 />
               )}
-            </ErrorBoundary>
+            </>
           }
         />
 
