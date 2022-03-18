@@ -7,7 +7,7 @@ import App from "./components/App";
 
 
 ReactDOM.render(
-  <Router basename={process.env.PUBLIC_URL}>
+  <Router >
     {console.log("Process enviroment", process.env)}
     <App />
   </Router>,
