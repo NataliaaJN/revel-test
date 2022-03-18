@@ -37,8 +37,8 @@ const App = () => {
   return (
     <div className="App">
       <Routes>
-        <Route exact
-          path="/"
+        <Route
+          path="/revel-test"
           element={
             <ErrorBoundary>
               <Header />
