@@ -40,7 +40,7 @@ const App = () => {
         <Route
           path="/"
           element={
-            <>
+            <ErrorBoundary>
               <Header />
               {hasError ? (
                 <ErrorMessage errorMessage={errorMessage} />
@@ -51,11 +51,11 @@ const App = () => {
                   photos={photos}
                 />
               )}
-            </>
+            </ErrorBoundary>
           }
         />
-
         <Route path="*" element={<PageNotFound />} />
+
       </Routes>
     </div>
   );
