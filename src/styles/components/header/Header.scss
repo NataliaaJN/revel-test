@@ -39,12 +39,10 @@
   }
 }
 .header {
-  ///
   width: 100%;
   z-index: 3;
   position: fixed;
   top: 0;
-  ///
   display: flex;
   @include center-items;
   height: 64px;

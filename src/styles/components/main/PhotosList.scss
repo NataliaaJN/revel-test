@@ -12,16 +12,14 @@
   }
 }
 .photosSection {
-  // ///
-  // margin-top: 86px;
-  margin-top: 64px;
-  // ///
   display: grid;
   @include center-items;
+  margin-top: 64px;
 
   @include desktop {
     width: 1211px;
     height: 1077px;
+    margin-top: 104px;
   }
 
   &__photosListContainer {
