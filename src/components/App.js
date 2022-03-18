@@ -28,7 +28,7 @@ const App = () => {
         setPhotos(data);
         setIsLoading(false);
         console.log(process.env);
-        console.log(process.env.PUBLIC_URL);
+        console.log("Process enviroment", process.env.PUBLIC_URL);
       })
       .catch((error) => {
         setErrorMessage(error.message);
