@@ -37,7 +37,7 @@ const App = () => {
   return (
     <div className="App">
       <Routes>
-        <Route
+        <Route exact
           path="/"
           element={
             <ErrorBoundary>
