@@ -38,7 +38,7 @@ const App = () => {
     <div className="App">
       <Routes>
         <Route
-          path="/"
+          path={process.env.PUBLIC_URL + '/'}
           element={
             <ErrorBoundary>
               <Header />
