@@ -8,9 +8,9 @@ import App from "./components/App";
 
 ReactDOM.render(
   // <Router basename={process.env.PUBLIC_URL}>
-  <HashRouter>
+  <Router>
     {console.log("Process enviroment", process.env.PUBLIC_URL)}
     <App />
-  </HashRouter>,
+  </Router>,
   document.getElementById("root")
 );
