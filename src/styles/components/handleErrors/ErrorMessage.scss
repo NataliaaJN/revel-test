@@ -18,6 +18,7 @@
     text-align: center;
     font: normal 400 24px/38px $mainFont;
     margin-bottom: 30px;
+    color: $grey;
 
     @include desktop {
       font-size: 32px;
