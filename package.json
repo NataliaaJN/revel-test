@@ -1,6 +1,6 @@
 {
   "name": "revel-test",
-  "homepage": "https://nataliaajn.github.io/revel-test/",
+  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

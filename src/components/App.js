@@ -38,9 +38,9 @@ const App = () => {
     <div className="App">
       <Routes>
         <Route
-          path="https://nataliaajn.github.io/revel-test/"
+          path="/"
           element={
-            <>
+            <ErrorBoundary>
               <Header />
               {hasError ? (
                 <ErrorMessage errorMessage={errorMessage} />
@@ -51,7 +51,7 @@ const App = () => {
                   photos={photos}
                 />
               )}
-            </>
+            </ErrorBoundary>
           }
         />
         <Route path="*" element={<PageNotFound />} />
