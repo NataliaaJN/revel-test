@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/revel-test/static/css/main.bed7029c.css",
-    "main.js": "/revel-test/static/js/main.fd323766.js",
-    "static/media/computer-cat.gif": "/revel-test/static/media/computer-cat.ec0e0633341307e74f0e.gif",
-    "index.html": "/revel-test/index.html",
-    "main.bed7029c.css.map": "/revel-test/static/css/main.bed7029c.css.map",
-    "main.fd323766.js.map": "/revel-test/static/js/main.fd323766.js.map"
+    "main.css": "./static/css/main.bed7029c.css",
+    "main.js": "./static/js/main.3708df78.js",
+    "static/media/computer-cat.gif": "./static/media/computer-cat.ec0e0633341307e74f0e.gif",
+    "index.html": "./index.html",
+    "main.bed7029c.css.map": "./static/css/main.bed7029c.css.map",
+    "main.3708df78.js.map": "./static/js/main.3708df78.js.map"
   },
   "entrypoints": [
     "static/css/main.bed7029c.css",
-    "static/js/main.fd323766.js"
+    "static/js/main.3708df78.js"
   ]
 }
