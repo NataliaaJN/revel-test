@@ -4,7 +4,7 @@
 Basically, the exercise consisted of requesting 9 photos from the api https://picsum.photos/ and paint them on a responsive grid.
 
 ## 🦾 INSTALLATION AND USAGE 🦾
-- ### `git clone`
+- ### `git clone https://github.com/NataliaaJN/revel-test.git`
 - ### `npm install`
     Install this project
 
